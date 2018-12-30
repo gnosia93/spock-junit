@@ -1,3 +1,29 @@
+## 이클립스 Groovy 설정하기 ##
+
+이클립스 마켓에서 아래의 플러그인을 다운 받아서 설치한다. 
+
+ 1) spock
+
+ 2) groovy develepement tools
+
+spy() 를 사용할 경우 cglib가 필요한데, maven 의존성은 다음과 같이 2.2 버전에 대해 의존 정보를 추가해야 한다.
+
+```
+<!-- dependency>
+    <groupId>cglib</groupId>
+    <artifactId>cglib</artifactId>
+    <version>3.2.9</version>
+</dependency -->
+<!-- https://mvnrepository.com/artifact/cglib/cglib-nodep -->
+<dependency>
+    <groupId>cglib</groupId>
+    <artifactId>cglib-nodep</artifactId>
+    <version>2.2</version>
+</dependency>
+```
+
+
+
 
 
 ## appliction.yml ##
@@ -158,7 +184,9 @@ class FirstTest extends Specification {
 ## 레퍼런스 ##
 https://www.baeldung.com/groovy-spock
 
+https://thejavatar.com/testing-with-spock/
 
+https://code.google.com/archive/p/spock/
 
 
 
