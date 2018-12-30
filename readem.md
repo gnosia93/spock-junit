@@ -1,6 +1,11 @@
 
 
+
+
 ## POM ##
+
+h2.
+
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -54,7 +59,8 @@
 		<dependency>
 		    <groupId>com.h2database</groupId>
 		    <artifactId>h2</artifactId>
-		</dependency>
+		    <!-- scope>test</scope -->              // test 스코프를 제외시킨다. 
+ 		</dependency>
 		
 	</dependencies>
 
