@@ -16,8 +16,6 @@ spring:
 
 ## POM ##
 
-JPA h2 메모리 DB 의존 관계 설정시 scope 는 아래와 같이 주석처리 한다. 
-
 spock 을 구동하기 위해서 spock-core, groovy-all 의존 관계가 필요하며, gmavenplus-plugin 플러그인 역시 . 
 
 
