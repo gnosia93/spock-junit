@@ -4,8 +4,7 @@
 
 ## POM ##
 
-h2.
-
+h2 메모리 DBMS 를 이용하여 JPA 를 테스트 한다. 이때 Maven POM 에 h2 의존 관계 설정시 scope 설정시 아래와 같이 주석 처리한다. 
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
