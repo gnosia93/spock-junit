@@ -155,7 +155,15 @@ spock 을 구동하기 위해서 spock-core, groovy-all 의존 관계가 필요�
 
 STS 프로젝트에서 New -> Other -> Groovy -> Groovy Test Case 를 선택하고, New JUnit Jupiter Test (JUnit 5) 를 선택한 후,
 
-테스트 클래스를 만들어 준다. 
+테스트 클래스를 만들어 주되, Specification 클래스를 상속 받도록 한다. 
+
+이렇게 생성된 groovy 파일은 /src/test/java 디렉토리 밑에 생성된다. 별도로 groovy 용으로 디렉토리를 만들어 줄 
+
+필요는 없는 듯 하다. 
+
+또한 이클립스에서 단축시 Ctrl + X + T 를 사용하는 경우 테스트 할 수 있다. 
+
+
 
 Spock addresses this problem with blocks. Blocks are a Spock native way of breaking up the phases of our test using labels. They give us labels for given when then and more:
 
