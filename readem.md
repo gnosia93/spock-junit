@@ -18,7 +18,12 @@ spring:
 
 h2 메모리 DBMS 를 이용하여 JPA 를 테스트 한다. 
 
-이때 Maven POM 에 h2 의존 관계 설정시 scope 설정시 아래와 같이 주석 처리한다. 
+이때 Maven POM 에 h2 의존 관계 설정시 scope 설정시 아래와 같이 주석 처리한다.
+
+spock 을 구동하기 위해서 spock-core, groovy-all 의존 관계를 아래와 같이 추가하고, 
+
+gmavenplus-plugin 플러그인 을 등록한다. 
+
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -72,8 +77,24 @@ h2 메모리 DBMS 를 이용하여 JPA 를 테스트 한다.
 		<dependency>
 		    <groupId>com.h2database</groupId>
 		    <artifactId>h2</artifactId>
-		    <!-- scope>test</scope -->              // test 스코프를 제외시킨다. 
- 		</dependency>
+		</dependency>
+		
+		
+		<!--  spock test configuration  -->
+		<dependency>
+    		<groupId>org.spockframework</groupId>
+		    <artifactId>spock-core</artifactId>
+		    <version>1.0-groovy-2.4</version>
+		    <scope>test</scope>
+		</dependency>
+		<dependency>
+		    <groupId>org.codehaus.groovy</groupId>
+		    <artifactId>groovy-all</artifactId>
+		    <version>2.4.7</version>
+		    <scope>test</scope>
+		</dependency>
+		<!--  spock test configuration  -->
+		
 		
 	</dependencies>
 
@@ -83,10 +104,27 @@ h2 메모리 DBMS 를 이용하여 JPA 를 테스트 한다.
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			
+			<!--  spock test configuration  -->
+			<plugin>
+			    <groupId>org.codehaus.gmavenplus</groupId>
+			    <artifactId>gmavenplus-plugin</artifactId>
+			    <version>1.5</version>
+			    <executions>
+			        <execution>
+			            <goals>
+			                <goal>compile</goal>
+			                <goal>testCompile</goal>
+			            </goals>
+			        </execution>
+			     </executions>
+			</plugin>
+			<!--  spock test configuration  -->
+			
 		</plugins>
 	</build>
-
 </project>
+
 
 ```
 
