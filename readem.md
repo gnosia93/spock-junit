@@ -16,13 +16,9 @@ spring:
 
 ## POM ##
 
-h2 메모리 DBMS 를 이용하여 JPA 를 테스트 한다. 
+JPA h2 메모리 DB 의존 관계 설정시 scope 는 아래와 같이 주석처리 한다. 
 
-이때 Maven POM 에 h2 의존 관계 설정시 scope 설정시 아래와 같이 주석 처리한다.
-
-spock 을 구동하기 위해서 spock-core, groovy-all 의존 관계를 아래와 같이 추가하고, 
-
-gmavenplus-plugin 플러그인 을 등록한다. 
+spock 을 구동하기 위해서 spock-core, groovy-all 의존 관계가 필요하며, gmavenplus-plugin 플러그인 역시 . 
 
 
 ```
