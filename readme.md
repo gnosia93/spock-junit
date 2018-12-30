@@ -6,7 +6,11 @@
 
  2) groovy develepement tools
 
-spy() 를 사용할 경우 cglib가 필요한데, maven 의존성은 다음과 같이 2.2 버전에 대해 의존 정보를 추가해야 한다.
+
+
+spy() 를 사용할 경우 cglib가 필요한데, 
+
+nodep 버전인 2.2 버전을 의존 관계로 추가하여야 한다. 
 
 ```
 <!-- dependency>
