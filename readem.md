@@ -127,6 +127,14 @@ STS 프로젝트에서 New -> Other -> Groovy -> Groovy Test Case 를 선택하�
 
 테스트 클래스를 만들어 준다. 
 
+Spock addresses this problem with blocks. Blocks are a Spock native way of breaking up the phases of our test using labels. They give us labels for given when then and more:
+
+Setup (Aliased by Given) – Here we perform any setup needed before a test is run. This is an implicit block, with code not in any block at all becoming part of it
+When – This is where we provide a stimulus to what is under test. In other words, where we invoke our method under test
+Then – This is where the assertions belong. In Spock, these are evaluated as plain boolean assertions, which will be covered later
+Expect – This is a way of performing our stimulus and assertion within the same block. Depending on what we find more expressive, we may or may not choose to use this block
+Cleanup – Here we tear down any test dependency resources which would otherwise be left behind. For example, we might want to remove any files from the file system or remove test data written to a database
+
 
 ```
 package io.startup.spockjunit
