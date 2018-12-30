@@ -1,10 +1,24 @@
 
 
+## appliction.yml ##
 
+어플리케이션 프로퍼터 yml 설정 파일에 아래와 같이 h2 데이터 베이스의 설정 정보를 추가한다. 
+
+
+```
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:localhost;DB_CLOSE_ON_EXIT=FALSE
+    username: admin
+    password:
+```
 
 ## POM ##
 
-h2 메모리 DBMS 를 이용하여 JPA 를 테스트 한다. 이때 Maven POM 에 h2 의존 관계 설정시 scope 설정시 아래와 같이 주석 처리한다. 
+h2 메모리 DBMS 를 이용하여 JPA 를 테스트 한다. 
+
+이때 Maven POM 에 h2 의존 관계 설정시 scope 설정시 아래와 같이 주석 처리한다. 
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
