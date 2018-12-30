@@ -118,7 +118,36 @@ spock 을 구동하기 위해서 spock-core, groovy-all 의존 관계가 필요�
 		</plugins>
 	</build>
 </project>
+```
+
+
+## Spock Junit 테스트 예제 ##
+
+STS 프로젝트에서 New -> Other -> Groovy -> Groovy Test Case 를 선택하고, New JUnit Jupiter Test (JUnit 5) 를 선택한 후,
+
+테스트 클래스를 만들어 준다. 
 
 
 ```
+package io.startup.spockjunit
+
+import static org.junit.jupiter.api.Assertions.*
+import spock.lang.Specification
+
+class FirstTest extends Specification {
+
+	
+	def "one plus one should equal two" () {
+		expect:
+		1 + 1 == 2
+		
+	}
+	
+
+}
+
+
+```
+
+
 
