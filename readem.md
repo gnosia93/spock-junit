@@ -144,7 +144,6 @@ import spock.lang.Specification
 
 class FirstTest extends Specification {
 
-	
 	def "one plus one should equal two" () {
 		expect:
 		1 + 1 == 2
@@ -154,8 +153,12 @@ class FirstTest extends Specification {
 
 }
 
-
 ```
+
+## 레퍼런스 ##
+https://www.baeldung.com/groovy-spock
+
+
 
 
 
