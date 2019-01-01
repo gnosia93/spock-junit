@@ -193,6 +193,10 @@ class FirstTest extends Specification {
 
 ```
 
+## JUNIT ##
+https://github.com/gnosia93/spock-junit/blob/master/junit.md
+
+
 ## 레퍼런스 ##
 
 ### Spock ### 
