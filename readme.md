@@ -68,8 +68,10 @@ spock 을 구동하기 위해서 spock-core, groovy-all 의존 관계가 필요�
 
 	<properties>
 		<java.version>1.8</java.version>
+		<maven.compiler.source>1.8</maven.compiler.source>
+    		<maven.compiler.target>1.8</maven.compiler.target>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        	<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 	</properties>
 
 	<dependencies>
@@ -108,7 +110,8 @@ spock 을 구동하기 위해서 spock-core, groovy-all 의존 관계가 필요�
 		<dependency>
     		<groupId>org.spockframework</groupId>
 		    <artifactId>spock-core</artifactId>
-		    <version>1.0-groovy-2.4</version>
+		    <!-- version>1.0-groovy-2.4</version-->
+	   	    <version>1.2-groovy-2.5</version>
 		    <scope>test</scope>
 		</dependency>
 		<dependency>
