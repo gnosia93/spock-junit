@@ -194,6 +194,8 @@ class FirstTest extends Specification {
 ```
 
 ## 레퍼런스 ##
+
+### Spock ### 
 https://www.baeldung.com/groovy-spock
 
 https://thejavatar.com/testing-with-spock/
